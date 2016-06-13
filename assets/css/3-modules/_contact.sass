@@ -1,0 +1,32 @@
+section.contact
+  padding: 120px 0
+  .heading
+    padding-bottom: 30px
+    @media (min-width: 992px)
+      padding-bottom: 120px
+  .highlight
+    color: $metroblue
+  .social-icons
+    a
+      display: inline-block
+      width: 42px
+      height: 42px
+      text-align: center
+      line-height: 42px
+      font-size: 24px
+      background-color: $metrogray
+      margin-right: 10px
+      color: $metroblue
+      transition: background-color .3s ease-in-out
+      @media (min-width: 992px)
+        height: 128px
+        width: 128px
+        line-height: 128px
+        font-size: 48px
+      &:hover, &:focus
+        background-color: $metroblue
+        .fa
+          color: $metrogray
+          transform: scale(1.3)
+      .fa
+        transition: all .4s ease-in-out

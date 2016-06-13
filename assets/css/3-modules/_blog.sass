@@ -1,0 +1,60 @@
+section.blog
+  position: relative
+  margin-top: 100px
+  background: $metroblack
+  color: $metrogray
+  .title
+    color: $metrogray
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    height: 120px
+    width: 100%
+    transform: skewY(-3deg)
+    background: $metroblack
+    transform-origin: top left
+  &:after
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    height: 120px
+    width: 100%
+    transform: skewY(3deg)
+    background: $metroblack
+    transform-origin: bottom left
+  .blog-wrapper
+    margin-top: 45px
+    .post
+      z-index: 10
+      [class*="col-"]
+        margin-top: 25px
+        margin-bottom: 25px
+      img
+        width: 100%
+        max-height: 450px
+        object-fit: cover
+        object-position: 0 0
+      .title
+        text-decoration: none
+        margin-top: 0
+      ul.post-details
+        padding: 0
+        li
+          display: inline-block
+          padding: 0 10px
+          &:first-of-type
+            border-right: 1px solid $metrogray
+            height: 100%
+            padding-left: 0
+      .hr
+        border-top: solid $metrogray 1px
+      p.post-content
+        margin-top: 10px
+    .btn-all
+      position: relative
+      z-index: 20
+      margin-bottom: 50px
+  margin-bottom: 100px

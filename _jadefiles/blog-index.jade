@@ -1,0 +1,27 @@
+//Blog Index
+.container-fluid.body-content
+  .row
+    .col-md-8.col-md-offset-2
+      .blog-main
+        h2.title Blog
+        p.lead  The latest articles from me on design and front end development
+        hr
+        = "{% for post in site.categories['blog'] limit:10 %}"
+        .col-sm-5
+          a(href="{{post.url}}")
+            img(src="{{post.thumbnail}}", class="img-responsive img-centered")
+        .col-sm-7
+          h2.title= '{{post.title}}'
+          ul.post-details
+            li {{post.author}}
+            li {{post.categories | join: ', ' | remove: 'blog, '}}
+          hr
+          p= '{{post.excerpt}}'
+          a.btn.btn-metro(href="{{post.url}}") Read More
+        hr
+        = '{% endfor %}'
+      .col-xs-12.text-center
+        a.btn.btn-metro.btn-large(href="https://medium.com/@jasonm4130") View More Posts on Medium
+      .col-xs-12.modal-footer
+        .pull-left
+        a.btn.btn-metro(href="mailto:jason@jasonmdesign.com") Get in touch

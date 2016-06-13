@@ -1,0 +1,23 @@
+section.blog#blog
+  .container-fluid
+    .row
+      .blog-title
+        h2.title.text-center Blog
+        p.lead.text-center Read the latest articles from me.
+      .blog-wrapper         
+        = "{% for post in site.categories['blog'] limit:4 %}"
+        .col-lg-5.col-md-6.post.blog-height(class="{% cycle 'col-lg-offset-1', '' %}")
+          .col-xs-12
+            a(href='{{post.url}}')
+              img.img-responsive(src="{{post.thumbnail}}")
+          .col-xs-12
+            h4.title= '{{post.title}}'
+            ul.post-details
+              li {{post.author}}
+              li {{post.categories | join: ', ' | remove: 'blog, '}}
+            .hr
+            p.post-content= '{{post.excerpt}}'
+            a.btn.btn-metro(href="{{post.url}}") Read More
+        = '{% endfor %}'
+        .col-xs-12.text-center
+          a.btn.btn-metro.btn-all(data-toggle="modal", href="/blog") See all posts

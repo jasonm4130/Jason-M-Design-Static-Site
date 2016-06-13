@@ -1,0 +1,188 @@
+@media (min-width: 992px)
+  .jumbotron
+    .hero
+      animation: hero 2s ease forwards
+      animation-delay: 0.5s
+      opacity: 0
+    .hero-img
+      animation: hero 2s ease forwards
+      animation-delay: 0.7s
+      opacity: 0
+  .portfolio-title
+    .portfolio-animate
+      .title, .lead
+        opacity: 0
+        transform: translateX(-600px)
+        animation: portfolio 2s ease forwards
+    .portfolio-visible
+      .title, .lead
+        opacity: 1
+        transform: translateX(0)
+        animation: none
+  section.testimonials
+    .slider-animate
+      .unslider
+        opacity: 0
+      .animate
+        animation: testimonials 1s ease forwards
+        animation-delay: .3s
+      .visible
+        opacity: 1
+        animation: none
+    .testimonials-title
+      .title
+        opacity: 0
+        transition: all 1s cubic-bezier(0.57, 0.18, 0.11, 1.68)
+        transform: scale(0.7)
+      .lead
+        opacity: 0
+        transition: all 1s cubic-bezier(0.57, 0.18, 0.11, 1.68)
+        transform: scale(0.7)
+      .animate-title
+        opacity: 1
+        transform: scale(1)
+      .animate-lead
+        opacity: 1
+        transform: scale(1)
+      .visible
+        opacity: 1
+        transform: scale(1)
+
+  section.youtube
+    .youtube-title
+      .title
+        opacity: 0
+        transition: all 1s cubic-bezier(0.57, 0.18, 0.11, 1.68)
+        transform: scale(0.7)
+      .lead
+        opacity: 0
+        transition: all 1s cubic-bezier(0.57, 0.18, 0.11, 1.68)
+        transform: scale(0.7)
+      .animate-title
+        opacity: 1
+        transform: scale(1)
+      .animate-lead
+        opacity: 1
+        transform: scale(1)
+      .visible
+        opacity: 1
+        transform: scale(1)
+    .left-col
+      transform: translateX(-300px)
+      opacity: 0
+    .right-col
+      transform: translateX(300px)
+      opacity: 0
+    .animate-left
+      animation: youtube-left 1s ease forwards
+    .animate-right
+      animation: youtube-right 1s ease forwards
+
+  section.blog
+    .blog-title
+      .title
+        opacity: 0
+        transition: all 1s cubic-bezier(0.57, 0.18, 0.11, 1.68)
+        transform: scale(0.7)
+      .lead
+        opacity: 0
+        transition: all 1s cubic-bezier(0.57, 0.18, 0.11, 1.68)
+        transform: scale(0.7)
+      .animate-title
+        opacity: 1
+        transform: scale(1)
+      .animate-lead
+        opacity: 1
+        transform: scale(1)
+      .visible
+        opacity: 1
+        transform: scale(1)
+    .post
+      opacity: 0
+      transition: all .5s cubic-bezier(0.57, 0.18, 0.11, 1.68)
+      transform: scale(0.7)
+    .animate-post
+      opacity: 1
+      transform: scale(1)
+      @for $i from 2 through 4
+        &:nth-of-type(#{$i})
+          transition-delay: 0.3s * $i
+    .visible
+      opacity: 1
+      transform: scale(1)
+
+  section.contact
+    .heading
+      opacity: 0
+    .animate
+      animation:  social-heading 1.5s ease forwards
+    .visible
+      opacity: 1
+    .social-icons a
+      transform: translateY(150px)
+      opacity: 0
+    .social-icons-animate
+      animation: social-icons 1.5s ease forwards
+    .social-icons-visible
+      opacity: 1
+    .social-icons-animate
+      @for $i from 2 through 5
+        &:nth-of-type(#{$i})
+          animation-delay: 0.1s * $i
+
+
+@keyframes hero
+  0%
+    opacity: 0
+    transform: scale(0.7)
+  100%
+    opacity: 1
+    transform: scale(1)
+
+@keyframes portfolio
+  0%
+    opacity: 0
+    transform: translateX(-600px)
+  100%
+    opacity: 1
+    transform: translateX(0)
+
+@keyframes testimonials
+  0%
+    opacity: 0
+    transform: scale(0.7)
+  100%
+    opacity: 1
+    transform: scale(1)
+
+@keyframes social-heading
+  0%
+    opacity: 0
+    transform: translateX(-200px)
+  100%
+    opacity: 1
+    transform: translateX(0)
+
+@keyframes social-icons
+  0%
+    opacity: 0
+    transform: translateY(150px)
+  100%
+    opacity: 1
+    transform: translateY(0)
+
+@keyframes youtube-left
+  0%
+    opacity: 0
+    transform: translateX(-300px)
+  100%
+    opacity: 1
+    transform: translateX(0)
+
+@keyframes youtube-right
+  0%
+    opacity: 0
+    transform: translateX(300px)
+  100%
+    opacity: 1
+    transform: translateX(0)

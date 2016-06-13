@@ -1,0 +1,43 @@
+// Start Portfolio Section
+section.portfolio#portfolio
+  .container-fluid
+    .row
+      .portfolio-title
+        h2.title.text-center Portfolio
+        p.text-center.lead My latest work can be found below.
+      .portfolio-filter
+        ul.nav.nav-pills.hidden-xs
+          li 
+            h3 Filter
+          li(data-filter="all", class="filter") All
+          li(data-filter=".web-design", class="filter") Web Design
+          li(data-filter=".mobile", class="filter") Mobile
+          li(data-filter=".ui", class="filter") UI
+          li(data-filter=".photoshop", class="filter") Photoshop
+        .navbar.navbar-default.visible-xs
+          .navbar-header
+            .navbar-brand Filter
+            button(type="button", class="navbar-toggle", data-toggle="collapse", data-target="#filter-navbar-collapse")
+              span(class="sr-only") Toggle Navigation
+              span(class="icon-bar")
+              span(class="icon-bar")
+              span(class="icon-bar")
+          .collapse.navbar-collapse#filter-navbar-collapse
+            ul.nav.navbar-nav
+              li(data-filter="all", class="filter active") All
+              li(data-filter=".web-design", class="filter") Web Design
+              li(data-filter=".mobile", class="filter") Mobile
+              li(data-filter=".ui", class="filter") UI
+              li(data-filter=".photoshop", class="filter") Photoshop
+              
+      .portfolio-items.text-center
+        = "{% for post in site.categories['portfolio'] %}"
+        .portfolio-item.col-lg-3.col-md-4.col-sm-6.mix(class="{{post.categories | join: ' ' }}")
+            img(src="{{post.thumbnail}}", class="img-responsive")
+            h3.text-center= '{{post.title}}'
+            .img-hover.text-center.img-responsive
+              a(data-toggle="modal", href="#{{post.slug}}")
+                .links
+                  i.fa.fa-eye
+                .cover
+        = '{% endfor %}'

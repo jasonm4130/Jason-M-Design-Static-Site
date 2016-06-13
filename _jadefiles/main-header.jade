@@ -1,0 +1,25 @@
+section.main-nav
+  .container
+    nav.navbar.navbar-blog.navbar-default(role='navigation')
+      .navbar-header
+        button(type='button', class='navbar-toggle collapsed', data-toggle='collapse', data-target='#main-nav-collapse')
+          span.sr-only Toggle Navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href="/")
+          img(src='/assets/img/brand.png', alt='JMD Logo')
+      .collapse.navbar-collapse#main-nav-collapse
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(href='/') Home
+          li
+            a(href='/#portfolio') Portfolio
+          li
+            a(href='/#testimonials') Testimonials
+          li
+            a(href='/#youtube') YouTube
+          li.active
+            a(href='/blog/') Blog
+          li
+            a(href='/#contact') Contact

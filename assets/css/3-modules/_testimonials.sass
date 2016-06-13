@@ -1,0 +1,68 @@
+section.testimonials
+  background: $metrogray
+  position: relative
+  .container-fluid
+    z-index: 10
+    position: relative
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    height: 120px
+    width: 100%
+    transform: skewY(-3deg)
+    background: $metrogray
+    transform-origin: top left
+  &:after
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    height: 120px
+    width: 100%
+    transform: skewY(3deg)
+    background: $metrogray
+    transform-origin: bottom left
+  .unslider-nav
+    width: 100%
+    display: inline-block
+  .unslider-arrow
+    top: 50%
+    transition: .5s ease-in-out
+    color: $metroblack
+    &:hover, &:focus
+      color: $metroblue
+  .author
+    text-align: center
+    margin: 20px
+    cursor: ew-resize
+    @media (min-width: 768px)
+      text-align: right
+      margin: 80px
+    img
+      max-height: 120px
+      display: inline-block
+      margin-bottom: 20px
+    .testimonial
+      quotes: "“" "”" "‘" "’"
+      @media (min-width: 768px)
+        margin-top: 50px
+        text-align: left
+      &:before
+        content: open-quote
+        font-size: 4em
+        line-height: .1em
+        margin-right: .25em
+        vertical-align: -0.4em
+      &:after
+        content: close-quote
+        font-size: 4em
+        line-height: .1em
+        margin-left: .25em
+        vertical-align: -0.6em
+      p
+        display: inline
+        width: auto
+    button
+      margin: 15px auto

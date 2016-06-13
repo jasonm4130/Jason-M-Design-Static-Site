@@ -1,0 +1,31 @@
+section.jumbotron
+  .container
+    nav.navbar.navbar-default(role='navigation')
+      .navbar-header
+        button(type='button', class='navbar-toggle collapsed', data-toggle='collapse', data-target='#main-nav-collapse')
+          span.sr-only Toggle Navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href="/")
+          img(src='/assets/img/brand.png', alt='JMD Logo')
+      .collapse.navbar-collapse#main-nav-collapse
+        ul.nav.navbar-nav.navbar-right
+          li.active
+            a(href='/') Home
+          li
+            a(href='#portfolio') Portfolio
+          li
+            a(href='#testimonials') Testimonials
+          li
+            a(href='#youtube') YouTube
+          li
+            a(href='#blog') Blog
+          li
+            a(href='#contact') Contact
+    .row
+      .col-sm-8.hero
+        h1 Hi I'm Jason!
+        p A front end designer and developer. That's not why you're here though. You want to see what I can do!
+      .col-sm-4.hero-img
+        img.img-responsive.img-circle(src='/assets/img/profile-pic.jpg')

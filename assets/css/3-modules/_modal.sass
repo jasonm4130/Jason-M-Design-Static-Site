@@ -1,0 +1,60 @@
+.portfolio-modal
+  padding: 0
+  margin: 0
+.blog-post-modal
+  padding: 0
+  margin: 0
+.blog-post-single
+  padding: 0
+  margin: 0
+.modal-content
+  border-radius: 0
+  background-clip: border-box
+  box-shadow: none
+  border: none
+  min-height: 100%
+  text-align: center
+.body-content
+  position: relative
+  color: $metroblack
+  h2
+    color: $metroblack
+.modal-body
+  text-align: left
+  h2.title
+    margin-bottom: 0
+    text-decoration: none
+  .lead
+    margin-bottom: 10px
+  img.img-centered
+    margin: 15px auto
+    max-height: 65vh
+  .content
+    margin-top: 15px
+  .btn-index-modal
+    margin-bottom: 25px
+.close-modal
+  position: absolute
+  width: 75px
+  height: 75px
+  background-color: transparent
+  top: 25px
+  right: 25px
+  cursor: pointer
+  z-index: 1050
+  transition: .5s ease-in-out
+  @media (min-width: 992px)
+    position: fixed
+  &:hover
+    opacity: 0.3
+  .lr
+    height: 75px
+    width: 1px
+    margin-left: 35px
+    background-color: $metroblack
+    transform: rotate(45deg)
+  .rl
+    height: 75px
+    width: 1px
+    background-color: $metroblack
+    transform: rotate(90deg)

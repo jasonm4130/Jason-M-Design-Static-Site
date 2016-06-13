@@ -1,0 +1,25 @@
+<!--Portfolio Modals-->{% for post in site.categories['portfolio'] %}<div class="portfolio-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="{{post.slug}}"><div class="modal-content"><a class="close-modal" data-dismiss="modal" href="#"><div class="lr"><div class="rl"></div></div></a><div class="container-fluid body-content"><div class="row"><div class="col-md-8 col-lg-offset-2"><div class="modal-body container"><h2 class="title">{{post.title}}</h2><p class="lead">{{post.lead}}</p><hr/><img class="img-responsive img-centered" src="{{post.thumbnail}}"/><div class="content">{{post.content}}</div><div class="col-xs-12 modal-footer"><div class="pull-left">{% if post.case-study %}<a class="btn btn-metro" href="{{post.case-study}}">Download Case Study</a>{% endif %}{% if post.live-site %}<a class="btn btn-metro" href="{{post.live-site}}">View Live Site</a>{% endif %}</div><a class="btn btn-metro" href="mailto:jason@jasonmdesign.com">Get in touch</a></div></div></div></div></div></div></div>{% endfor %}<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body#blueimp-gallery.blueimp-gallery
+  // The container for the modal slides
+  .slides
+  // Controls for the borderless lightbox
+  h3.title
+  a.prev ‹
+  a.next ›
+  a.close ×
+  a.play-pause
+  ol.indicator
+  // The modal dialog, which will be used to wrap the lightbox content
+  .modal.fade
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type='button', aria-hidden='true') ×
+          h4.modal-title
+        .modal-body.next
+        .modal-footer
+          button.btn.btn-default.pull-left.prev(type='button')
+            i.glyphicon.glyphicon-chevron-left
+            |                         Previous
+          button.btn.btn-primary.next(type='button')
+            | Next
+            i.glyphicon.glyphicon-chevron-right-->
