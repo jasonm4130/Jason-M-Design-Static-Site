@@ -93,4 +93,4 @@ However, understanding it is easier than the ability to execute a well-organized
 
 Design that truly pushes the boundaries of digital media is still in its infancy. Hopefully, the principles of good design will keep up with the rapid advances of technology so that our experience of digital media remains full of meaning and pleasure.
 
-This post was brought to you through a partnership with the [Toptal Blog](https://www.toptal.com/designers/visual/design-principles-hierarchy).
+This post was brought to you through a partnership with the [Toptal Blog](https://www.toptal.com/designers/visual/design-principles-hierarchy/#employ-just-adept-computer-engineers-now).
