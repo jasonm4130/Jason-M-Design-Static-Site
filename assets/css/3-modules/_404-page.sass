@@ -1,0 +1,54 @@
+#error-container
+  background: $metrogray
+  position: absolute
+  height: 100%
+  width: 100%
+  left: 0
+  top: 0
+  font-family: Dosis,"Helvetica Neue","Lucida Grande",Arial,Verdana,sans-serif
+  .overlay
+    position: absolute
+    background-repeat: repeat
+    opacity: 0.1
+    width: 100%
+    height: 100%
+  .item-title
+    position: absolute
+    z-index: 0
+    left: 0
+    top: 50vh
+    width: 100%
+    padding: 0 5%
+    transition: all 0.3s cubic-bezier(0, 0, 0.58, 1)
+    transform: translateY(-50%)
+    opacity: 1
+    visibility: visible
+    #error-message
+      max-width: 600px
+      min-height: 350px
+      margin: 0 auto
+      p
+        margin: 10px 0
+        font-size: 18px
+        color: rgba(0,0,0,0.7)
+        font-weight: 400
+        line-height: normal
+        &:first-child
+          font-size: 110px
+          font-weight: 200
+          color: $metroblue
+          line-height: 110px
+    .link-bottom
+      margin: 0 auto
+      max-width: 600px
+      .link-icon
+        margin-right: 10px
+        font-size: 22px
+        color: $metroblack
+        transition: all 0.2s cubic-bezier(0.42,0,0.58,1)
+        &:hover, &:focus
+          color: $metroblue
+        .fa::before
+          margin-right: 10px
+        p
+          display: inline-block
