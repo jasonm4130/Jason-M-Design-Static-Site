@@ -3,21 +3,12 @@ section.blog#blog
     .row
       .blog-title
         h2.title.text-center Blog
-        p.lead.text-center Read the latest articles from me.
-      .blog-wrapper         
-        = "{% for post in site.categories['blog'] limit:4 %}"
-        .col-lg-5.col-md-6.post.blog-height(class="{% cycle 'col-lg-offset-1', '' %}")
-          .col-xs-12
-            a(href='{{post.url}}')
-              img.img-responsive(src="{{post.thumbnail}}")
-          .col-xs-12
-            h4.title= '{{post.title}}'
-            ul.post-details
-              li {{post.author}}
-              li {{post.categories | join: ', ' | remove: 'blog, '}}
-            .hr
-            p.post-content= '{{post.excerpt}}'
-            a.btn.btn-metro(href="{{post.url}}") Read More
-        = '{% endfor %}'
-        .col-xs-12.text-center
-          a.btn.btn-metro.btn-all(data-toggle="modal", href="/blog") See all posts
+        p.lead.text-center The latest articles from me.
+      .col-md-4.col-md-offset-2.post
+        img.img-responsive(src="/assets/img/blog-img.png")
+      .col-md-4.content.post
+        h3 Sharing is caring!
+        p I always like to share what I am up to in the world of web design and development. I wouldn't be who I am today without the help of those that shared their skills, and as such I feel indebted to share the skills and tricks I learn along the way too.
+        p I don't have a traditional blog though, but you can check out all of my posts over on medium. Simply click on the link below and you will be able to access all the content I've created over there.
+      .col-xs-12.text-center
+        a.btn.btn-all.btn-metro(href="//medium.jasonmdesign.com") See my posts
