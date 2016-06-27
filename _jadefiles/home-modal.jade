@@ -25,30 +25,3 @@
                 = '{% endif %}'
               a.btn.btn-metro(href="mailto:jason@jasonmdesign.com") Get in touch
 = '{% endfor %}'
-
-// The Bootstrap Image Gallery lightbox, should be a child element of the document body
-    #blueimp-gallery.blueimp-gallery
-      // The container for the modal slides
-      .slides
-      // Controls for the borderless lightbox
-      h3.title
-      a.prev ‹
-      a.next ›
-      a.close ×
-      a.play-pause
-      ol.indicator
-      // The modal dialog, which will be used to wrap the lightbox content
-      .modal.fade
-        .modal-dialog
-          .modal-content
-            .modal-header
-              button.close(type='button', aria-hidden='true') ×
-              h4.modal-title
-            .modal-body.next
-            .modal-footer
-              button.btn.btn-default.pull-left.prev(type='button')
-                i.glyphicon.glyphicon-chevron-left
-                |                         Previous
-              button.btn.btn-primary.next(type='button')
-                | Next
-                i.glyphicon.glyphicon-chevron-right

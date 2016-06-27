@@ -32,7 +32,8 @@ section.portfolio#portfolio
               
       .portfolio-items.text-center
         = "{% for post in site.categories['portfolio'] %}"
-        .portfolio-item.col-lg-3.col-md-4.col-sm-6.mix(class="{{post.categories | join: ' ' }}")
+        .mix.col-lg-3.col-md-4.col-sm-6(class="{{post.categories | join: ' ' }}")
+          .portfolio-item.col-xs-12
             img(src="{{post.thumbnail}}", class="img-responsive")
             h3.text-center= '{{post.title}}'
             .img-hover.text-center.img-responsive
