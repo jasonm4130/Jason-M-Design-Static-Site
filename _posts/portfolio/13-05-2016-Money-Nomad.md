@@ -25,4 +25,3 @@ We started by clearly defining the goals that both Rob and I had for the project
   -Built on WordPress
 
 <a class="btn btn-metro" href="http://moneynomad.com/">View Live Site</a>
-<a class="btn btn-metro" href="/assets/casestudy/abc.pdf">Download case study</a>

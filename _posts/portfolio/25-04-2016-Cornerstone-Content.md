@@ -18,4 +18,3 @@ While Rob, Myles and their team have years of experience creating amazing conten
 Lastly the website is optimized for speed allowing their clients to use the home page and other pages as fast as possible making browsing and using the website an enjoyable experience for them and the Cornerstone Content team.
 
 <a class="btn btn-metro" href="http://cornerstonecontent.org">View Live Site</a>
-<a class="btn btn-metro" href="/assets/casestudy/abc.pdf">Download case study</a>
