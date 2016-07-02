@@ -12,8 +12,10 @@
     "browser-sync": "2.13.0",
     "gulp": "3.9.1",
     "gulp-autoprefixer": "3.1.0",
+    "gulp-plumber": "^1.1.0",
     "gulp-pug": "3.0.3",
     "gulp-sass": "2.3.1",
+    "gulp-util": "^3.0.7",
     "pug": "2.0.0-beta2"
   },
   "repository": {
