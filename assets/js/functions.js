@@ -11,6 +11,9 @@ $( document ).ready(function() {
   $('.match-height').matchHeight({
     byRow: true
   });
+  $('.portfolio').matchHeight({
+    byRow: true
+  });
 
   //Portfolio Links Fade In / Out
   $('.portfolio-item').hover(function(){
