@@ -161,10 +161,10 @@ $( document ).ready(function() {
         el.addClass('animate');
       }
     });
-    $('.contact .social-icons a').each(function(i, el){
+    $('.contact .contact-icons a').each(function(i, el){
       var el = $(el);
       if(el.visible(true)) {
-        el.addClass('social-icons-animate');
+        el.addClass('contact-icons-animate');
       }
     });
   });

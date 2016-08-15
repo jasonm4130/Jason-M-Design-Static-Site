@@ -118,14 +118,14 @@
       animation:  social-heading 1.5s ease forwards
     .visible
       opacity: 1
-    .social-icons a
+    .contact-icons a
       transform: translateY(150px)
       opacity: 0
-    .social-icons-animate
-      animation: social-icons 1.5s ease forwards
-    .social-icons-visible
+    .contact-icons-animate
+      animation: contact-icons 1.5s ease forwards
+    .contact-icons-visible
       opacity: 1
-    .social-icons-animate
+    .contact-icons-animate
       @for $i from 2 through 5
         &:nth-of-type(#{$i})
           animation-delay: 0.1s * $i
@@ -163,7 +163,7 @@
     opacity: 1
     transform: translateX(0)
 
-@keyframes social-icons
+@keyframes contact-icons
   0%
     opacity: 0
     transform: translateY(150px)
