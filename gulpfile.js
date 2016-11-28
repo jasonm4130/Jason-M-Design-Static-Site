@@ -100,7 +100,7 @@ gulp.task('sass', function () {
                     ".in",
                     ".modal-backdrop"]
          }))
-         .pipe(gulp.dest('assets/css/1-tools/'));
+         .pipe(gulp.dest('assets/css/1-tools/uncss'));
  });
 
  gulp.task('uncss-fa', function () {
@@ -108,7 +108,7 @@ gulp.task('sass', function () {
          .pipe(uncss({
              html: ['_site/**/*.html'],
          }))
-         .pipe(gulp.dest('assets/css/1-tools/'));
+         .pipe(gulp.dest('assets/css/1-tools/uncss'));
  });
 
 /**
@@ -141,7 +141,7 @@ gulp.task('image-min', function(){
 gulp.task('watch', function () {
     gulp.watch('assets/css/**/*.sass', ['sass']);
     gulp.watch(['_jadefiles/**/*.jade'], ['pug']);
-    gulp.watch(['*.html', '_layouts/*.html', '_includes/*', '_posts/**/*.*'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_includes/*', '_posts/**/*.*'], ['jekyll-rebuild', 'uncss-fa', 'uncss-bs']);
     gulp.watch('assets/js/**/*.js', ['jekyll-rebuild']);
     gulp.watch('assets/img/**/*.+(png|jpg|gif|svg)', ['image-min']);
 });
@@ -150,4 +150,4 @@ gulp.task('watch', function () {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'watch', 'uncss-bs', 'uncss-fa']);

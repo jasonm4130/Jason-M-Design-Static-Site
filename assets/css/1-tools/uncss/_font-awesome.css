@@ -1,0 +1,116 @@
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* makes the font 33% larger relative to the icon container */
+/* Deprecated as of 4.4.0 */
+.pull-left {
+  float: left;
+}
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+.fa-envelope-o:before {
+  content: "\f003";
+}
+.fa-home:before {
+  content: "\f015";
+}
+.fa-clock-o:before {
+  content: "\f017";
+}
+.fa-pencil:before {
+  content: "\f040";
+}
+.fa-arrow-up:before {
+  content: "\f062";
+}
+.fa-eye:before {
+  content: "\f06e";
+}
+.fa-phone:before {
+  content: "\f095";
+}
+.fa-twitter:before {
+  content: "\f099";
+}
+.fa-facebook:before {
+  content: "\f09a";
+}
+.fa-github:before {
+  content: "\f09b";
+}
+.fa-globe:before {
+  content: "\f0ac";
+}
+.fa-briefcase:before {
+  content: "\f0b1";
+}
+.fa-users:before {
+  content: "\f0c0";
+}
+.fa-link:before {
+  content: "\f0c1";
+}
+.fa-pinterest:before {
+  content: "\f0d2";
+}
+.fa-google-plus:before {
+  content: "\f0d5";
+}
+.fa-envelope:before {
+  content: "\f0e0";
+}
+.fa-linkedin:before {
+  content: "\f0e1";
+}
+.fa-comment-o:before {
+  content: "\f0e5";
+}
+.fa-comments-o:before {
+  content: "\f0e6";
+}
+.fa-angle-down:before {
+  content: "\f107";
+}
+.fa-youtube:before {
+  content: "\f167";
+}
+.fa-instagram:before {
+  content: "\f16d";
+}
+.fa-graduation-cap:before {
+  content: "\f19d";
+}
+.fa-paper-plane-o:before {
+  content: "\f1d9";
+}
+.fa-object-group:before {
+  content: "\f247";
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
