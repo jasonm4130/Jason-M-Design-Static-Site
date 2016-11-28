@@ -68,9 +68,19 @@ gulp.task('sass', function () {
             outputStyle: 'compressed'
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(uncss({
-            html: ['_site/**/*.html'],
-            ignore: [/\w\.in/,
+        .pipe(gulp.dest('_site/assets/css'))
+        .pipe(browserSync.reload({stream:true}))
+        .pipe(gulp.dest('assets/css'));
+});
+
+/**
+ * UNCSS On Bootstrap
+ */
+ gulp.task('uncss-bs', function () {
+     return gulp.src('assets/css/1-tools/_bootstrap.css')
+         .pipe(uncss({
+             html: ['_site/**/*.html'],
+             ignore: [/\w\.in/,
                     ".fade",
                     ".collapse",
                     ".collapsing",
@@ -89,11 +99,17 @@ gulp.task('sass', function () {
                     ".modal-open",
                     ".in",
                     ".modal-backdrop"]
-        }))
-        .pipe(gulp.dest('_site/assets/css'))
-        .pipe(browserSync.reload({stream:true}))
-        .pipe(gulp.dest('assets/css'));
-});
+         }))
+         .pipe(gulp.dest('assets/css/1-tools/'));
+ });
+
+ gulp.task('uncss-fa', function () {
+     return gulp.src('assets/css/1-tools/_font-awesome.css')
+         .pipe(uncss({
+             html: ['_site/**/*.html'],
+         }))
+         .pipe(gulp.dest('assets/css/1-tools/'));
+ });
 
 /**
  * Custom Gulp Task
