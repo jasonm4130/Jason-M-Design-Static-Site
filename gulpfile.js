@@ -6,6 +6,7 @@ var cp          = require('child_process');
 var pug         = require('gulp-pug');
 var imagemin    = require('gulp-imagemin');
 var cache       = require('gulp-cache');
+var uncss       = require('gulp-uncss');
 var plumber     = require('gulp-plumber');
 var gutil       = require('gulp-util');
 
@@ -67,6 +68,28 @@ gulp.task('sass', function () {
             outputStyle: 'compressed'
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(uncss({
+            html: ['_site/**/*.html'],
+            ignore: [/\w\.in/,
+                    ".fade",
+                    ".collapse",
+                    ".collapsing",
+                    /(#|\.)navbar(\-[a-zA-Z]+)?/,
+                    /(#|\.)dropdown(\-[a-zA-Z]+)?/,
+                    /(#|\.)(open)/,
+                    ".modal",
+                    ".modal.fade.in",
+                    ".modal-dialog",
+                    ".modal-document",
+                    ".modal-scrollbar-measure",
+                    ".modal-backdrop.fade",
+                    ".modal-backdrop.in",
+                    ".modal.fade.modal-dialog",
+                    ".modal.in.modal-dialog",
+                    ".modal-open",
+                    ".in",
+                    ".modal-backdrop"]
+        }))
         .pipe(gulp.dest('_site/assets/css'))
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('assets/css'));
