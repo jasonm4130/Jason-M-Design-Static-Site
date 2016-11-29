@@ -1,0 +1,136 @@
+body {
+  margin: 0; }
+
+.email-background {
+  background: #eee;
+  padding: 10px; }
+
+.email-container, .pre-header {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  background: #fff;
+  overflow: auto;
+  overflow-x: hidden; }
+
+.pre-header {
+  background: #eee;
+  color: #eee; }
+
+.header-row {
+  padding: 15px; }
+  .header-row .logo {
+    max-width: 450px;
+    height: auto;
+    width: 100%; }
+  .header-row .linkedin {
+    display: inline;
+    float: right; }
+    .header-row .linkedin img {
+      margin: 16px 10px; }
+
+.content {
+  font-size: 12px; }
+  .content h2 {
+    margin: 10px auto;
+    text-align: center; }
+  .content .product {
+    padding-top: 30px;
+    display: inline-block; }
+  .content .col {
+    width: 50%;
+    display: inline-block;
+    float: left; }
+    @media (max-width: 500px) {
+      .content .col {
+        width: 100%; } }
+    .content .col .col-content {
+      max-width: 100%;
+      padding: 10px 40px;
+      margin: 0 auto;
+      padding-top: 0;
+      text-align: center; }
+      .content .col .col-content h3 {
+        margin-top: 0;
+        text-align: left; }
+      .content .col .col-content p {
+        text-align: left; }
+  .content img.product-img {
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto; }
+  .content .btn {
+    background: #3367d6;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #2451b2;
+    text-decoration: none; }
+    .content .btn:hover {
+      background: #20489d;
+      border: 1px solid #173472; }
+
+.info {
+  background-color: #173472;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px; }
+  .info h2 {
+    display: inline-block; }
+  .info a {
+    display: inline-block;
+    color: #fff; }
+  .info h4 {
+    margin-top: 0; }
+  .info .btn {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+    background: #fff;
+    color: #333;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    text-decoration: none; }
+    .info .btn:hover {
+      background: #e6e6e6; }
+
+.categories {
+  padding: 40px; }
+  .categories .category {
+    margin: 15px 15px;
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px; }
+    .categories .category:hover {
+      color: #595959; }
+    .categories .category img {
+      max-width: 45px;
+      max-height: 45px;
+      height: auto; }
+
+.subscription {
+  padding: 0 30px; }
+  .subscription .subscribe {
+    font-size: 18px; }
+    .subscription .subscribe p {
+      display: inline-block; }
+    .subscription .subscribe a {
+      display: inline-block;
+      margin-left: 5px; }
+  .subscription .unsubscribe {
+    font-size: 10px; }
+    .subscription .unsubscribe p {
+      margin: 0; }
+
+hr {
+  height: 10px;
+  border: 0;
+  box-shadow: 0 10px 10px -10px #8c8b8b inset;
+  width: 100%; }
+
+img {
+  max-width: 100%; }
