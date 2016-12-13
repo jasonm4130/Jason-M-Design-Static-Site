@@ -18,32 +18,41 @@ body {
   color: #eee; }
 
 .header-row {
-  padding: 15px; }
+  padding: 15px;
+  background: url("/images/header-bg.png");
+  background-size: cover; }
   .header-row .logo {
-    max-width: 450px;
-    height: auto;
-    width: 100%; }
-  .header-row .linkedin {
+    max-height: 100px; }
+  .header-row .linkedin,
+  .header-row .youtube {
     display: inline;
     float: right; }
-    .header-row .linkedin img {
+    .header-row .linkedin img,
+    .header-row .youtube img {
       margin: 16px 10px; }
 
 .content {
   font-size: 12px; }
-  .content h2 {
-    margin: 10px auto;
-    text-align: center; }
+  .content h2.title {
+    margin: 0 auto;
+    text-align: center;
+    background: #173472;
+    color: #fff;
+    padding: 15px;
+    font-size: 24px; }
   .content .product {
     padding-top: 30px;
     display: inline-block; }
   .content .col {
     width: 50%;
+    min-width: 250px;
     display: inline-block;
     float: left; }
     @media (max-width: 500px) {
       .content .col {
         width: 100%; } }
+    .content .col.video {
+      position: relative; }
     .content .col .col-content {
       max-width: 100%;
       padding: 10px 40px;
@@ -60,6 +69,24 @@ body {
     max-width: 200px;
     display: block;
     margin: 0 auto; }
+    .content img.product-img.video {
+      position: relative;
+      top: 0;
+      left: 0; }
+  .content img.play-button {
+    position: absolute;
+    max-width: 45px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .content img.video-strip {
+    position: absolute;
+    max-width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
   .content .btn {
     background: #3367d6;
     display: inline-block;
@@ -127,10 +154,13 @@ body {
       margin: 0; }
 
 hr {
-  height: 10px;
+  display: block;
+  height: 1px;
   border: 0;
-  box-shadow: 0 10px 10px -10px #8c8b8b inset;
-  width: 100%; }
+  border-top: 1px solid #d9d9d9;
+  background: #cccccc;
+  margin: 1em 0;
+  padding: 0; }
 
 img {
   max-width: 100%; }
