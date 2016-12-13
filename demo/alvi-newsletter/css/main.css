@@ -19,7 +19,7 @@ body {
 
 .header-row {
   padding: 15px;
-  background: url("/images/header-bg.png");
+  background: url("../images/header-bg.png");
   background-size: cover; }
   .header-row .logo {
     max-height: 100px; }
